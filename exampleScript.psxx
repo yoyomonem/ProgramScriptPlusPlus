@@ -59,8 +59,8 @@ def sort(var array)
 end
 
 def main()
-    noodle input = ""
-    noodle numbers = []
+    var input = ""
+    var numbers = []
 
     print("Welecome to the number sorter! Type `sort` to sort numbers.\n\n")
 
