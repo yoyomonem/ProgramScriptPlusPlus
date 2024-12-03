@@ -1,5 +1,5 @@
-# NoodleScript
-This is a simple interpreted programming language that has syntax and features heavily inspired by Python, but with an Italian twist!
+# ProgramScript++
+This is a simple interpreted programming language that has syntax and features heavily inspired by Python and MATLAB, but with a program-optimal twist!
 
 # Syntax and Features
 ## Comments
@@ -8,20 +8,20 @@ This is a simple interpreted programming language that has syntax and features h
 ```
 ## Variables
 ```
-noodle number = 10
-noodle bool = true
-noodle string = "Hello"
-noodle list = [10 true "Hello"]
+var number = 10
+var bool = true
+var string = "Hello"
+var list = [10 true "Hello"]
 ```
 ## Constant Variables
 ```
-frozen noodle x = 10
+const var x = 10
 x = 10  # Doesn't work
 ```
 ## IO
-### serve()
+### print()
 ```
-serve("Hello World!\n")  # Outputs `Hello World!` to the console
+print("Hello World!\n")  # Outputs `Hello World!` to the console
 ```
 ### receive()
 ```
@@ -31,7 +31,7 @@ input = receive()  # Parses input from user as a string
 ```
 if condition
   # Body
-eat
+end
 ```
 ### Else Statements
 ```
@@ -39,38 +39,38 @@ if condition
   # Body
 else
   # Body
-eat
+end
 ```
 ### While Loops
 ```
 while condition
   # Body
-eat
+end
 ```
 ## Functions
 ```
-recipe add(noodle num1 noodle num2)
-  num1 + num2  # notice how no return statement is needed
-eat
+def add(noodle num1 noodle num2)
+  num1 + num2  # notice how no return statement is needed, like in Rust
+end
 ```
 ## Nested Functions
 ```
-recipe div(noodle num noodle den)
-  recipe safeToDiv(noodle den)
+def div(noodle num noodle den)
+  def safeToDiv(noodle den)
       den != 0
-  eat
+  end
 
   if safeToDiv(den)
     num / den
   else
-    serve("Cannot divide by zero\n")
-  eat
-eat
+    print("Cannot divide by zero\n")
+  end
+end
 ```
 ## Built-In Functions
 ```
-serve()  # Outputs to console
-serveRaw()  # Outputs the runtime value of an expression
+print()  # Outputs to console
+printRaw()  # Outputs the runtime value of an expression
 receive()  # Parses input as string
 abs(num)  # Absolute value
 floor(num)  # Rounds down value
@@ -87,4 +87,4 @@ append(list any)  # Adds an element to a list
 pop(list num)  # Removes and returns an element from a list
 ```
 # Anything Else?
-Nope, just enjoy the debugging nightmare if you attempt using this language :)
+Nope, just enjoy the debugging nightmare if you attempt to use this language. ;)
