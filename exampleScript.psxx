@@ -1,11 +1,11 @@
-recipe isNumber(noodle string)
-    frozen noodle stringSize = len(string)
-    frozen noodle numberChrs = ["0" "1" "2" "3" "4" "5" "6" "7" "8" "9"]
-    noodle chrFound = false
-    noodle chrIndex = 0
-    noodle currentChr
-    noodle numberChrIndex
-    noodle foundNumberChr
+def isNumber(var string)
+    const var stringSize = len(string)
+    const var numberChrs = ["0" "1" "2" "3" "4" "5" "6" "7" "8" "9"]
+    var chrFound = false
+    var chrIndex = 0
+    var currentChr
+    var numberChrIndex
+    var foundNumberChr
 
     while chrIndex < stringSize && !chrFound
         currentChr = at(string chrIndex)
@@ -15,27 +15,27 @@ recipe isNumber(noodle string)
         while numberChrIndex < 10 && !foundNumberChr
             if currentChr == at(numberChrs numberChrIndex)
                 foundNumberChr = true
-            eat
+            end
 
             numberChrIndex++
-        eat
+        end
 
         if !foundNumberChr
             chrFound = true
-        eat
+        end
 
         chrIndex++
-    eat
+    end
 
     !chrFound
-eat
+end
 
-recipe sort(noodle array)
-    frozen noodle arraySize = len(array)
-    noodle arrayIndex = 0
-    noodle currentElem
-    noodle nextElem
-    noodle sorted = false
+def sort(var array)
+    const var arraySize = len(array)
+    var arrayIndex = 0
+    var currentElem
+    var nextElem
+    var sorted = false
 
     while !sorted
         arrayIndex = 0
@@ -51,18 +51,18 @@ recipe sort(noodle array)
                 sorted = false
             else 
                 arrayIndex++
-            eat
-        eat
-    eat
+            end
+        end
+    end
 
     array
-eat
+end
 
-recipe main()
+def main()
     noodle input = ""
     noodle numbers = []
 
-    serve("Welecome to the number sorter! Type `sort` to sort numbers.\n\n")
+    print("Welecome to the number sorter! Type `sort` to sort numbers.\n\n")
 
     while input != "sort"
         serve("Type a number to add to the list: ")
@@ -73,12 +73,12 @@ recipe main()
         else
             if input != "sort"
                 serve(" " input " is not a valid number\n")
-            eat
-        eat
-    eat
+            end
+        end
+    end
 
-    serve("\n Original number list: " numbers "\n")
-    serve(" Sorted number list: " sort(numbers) "\n\n")
-eat
+    print("\n Original number list: " numbers "\n")
+    print(" Sorted number list: " sort(numbers) "\n\n")
+end
 
 main()
