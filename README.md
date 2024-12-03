@@ -49,13 +49,13 @@ end
 ```
 ## Functions
 ```
-def add(noodle num1 noodle num2)
+def add(var num1 var num2)
   num1 + num2  # notice how no return statement is needed, like in Rust
 end
 ```
 ## Nested Functions
 ```
-def div(noodle num noodle den)
+def div(var num var den)
   def safeToDiv(noodle den)
       den != 0
   end
