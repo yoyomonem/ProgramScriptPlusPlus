@@ -1,5 +1,5 @@
 # ProgramScript++
-This is a simple interpreted programming language that has syntax and features heavily inspired by Python and MATLAB, but with a program-optimal twist!
+This is a simple interpreted programming language that has syntax and features heavily inspired by Python, JavaScript, and MATLAB. Basically NoodleScript, but more JavaScript-like.
 
 # Syntax and Features
 ## Comments
@@ -56,7 +56,7 @@ end
 ## Nested Functions
 ```
 def div(var num var den)
-  def safeToDiv(noodle den)
+  def safeToDiv(var den)
       den != 0
   end
 
